@@ -1,137 +1,151 @@
 <template>
-  <div class="container">
-    <div>
-      <header class="content-logos">
-        <logo />
-        <span class="plus">+</span>
-        <VuesaxLogo />
-      </header>
-      <h1 class="title">Nuxt.js + Vuesax</h1>
-      <h2 class="subtitle">
-        <a href="https://vuesax.com/">Vuesax</a> is a framework of ui components
-        for <a href="https://vuejs.org/">Vuejs</a>, It was created to make new
-        interfaces that have a new trend and are visually beautiful
-      </h2>
-      <div class="links">
-        <h3 class="h3">Vuesax</h3>
-        <a
-          href="https://vuesax.com/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://discordapp.com/invite/9dsKtvB"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          Discord
-        </a>
-        <a
-          href="https://github.com/lusaxweb/vuesax"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-      <div class="links">
-        <h3 class="h3">Nuxt.js</h3>
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-    </div>
-  </div>
+	<div>
+		<div class="center">
+			<div>
+				<h1 :class="animatedSpan">
+					<span>L</span><span>U</span><span>C</span><span>A</span
+					><span>S</span>&nbsp;<span>G</span><span>A</span
+					><span>R</span><span>D</span><span>I</span><span>N</span
+					><span>I</span><span>&nbsp;</span><span>D</span
+					><span>I</span><span>A</span><span>S</span><br />
+				</h1>
+				<h2>
+					<span style="color: #e44d21"
+						><i class="bx bxl-html5"></i
+					></span>
+					<span style="color: #264ce5"
+						><i class="bx bxl-css3"></i
+					></span>
+					<span style="color: #8152cd">
+						<i class="bx bxl-bootstrap"></i>
+					</span>
+					<span style="color: #f6de1e"
+						><i class="bx bxl-javascript"></i
+					></span>
+					<span style="color: #89c042">
+						<i class="bx bxl-nodejs"></i>
+					</span>
+					<span style="color: #41b883"
+						><i class="bx bxl-vuejs"></i
+					></span>
+					<span style="color: #3d78a9">
+						<i class="bx bxl-python"></i>
+					</span>
+				</h2>
+			</div>
+		</div>
+	</div>
 </template>
 
 <script>
-import Logo from '~/components/Logo.vue'
-import VuesaxLogo from '~/components/VuesaxLogo.vue'
-
 export default {
-  components: {
-    Logo,
-    VuesaxLogo,
-  },
-}
+	transition: "slide-bottom",
+	data: () => {
+		return {
+			animatedSpan: "animated-span",
+		};
+	},
+	mounted() {
+		setInterval(() => {
+			this.animatedSpan = "";
+			setTimeout(() => {
+				this.animatedSpan = "animated-span";
+			}, 200);
+		}, 1800);
+	},
+};
 </script>
 
 <style>
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.center {
+	position: absolute;
+	min-width: 100%;
+	min-height: 100%;
+	max-width: 100%;
+	max-height: 100%;
+	display: grid;
+	place-items: center;
+	text-align: center;
+	color: #fbfbfb;
 }
 
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 55px;
-  color: #35495e;
-  letter-spacing: 1px;
-  text-transform: capitalize;
-  margin: 25px 0;
+h1 {
+	/* font-family: "Prosto One", cursive; */
+	font-size: 3em;
+}
+h1 span {
+	display: inline-block;
+}
+h1.animated-span span {
+	animation: bounce 0.6s linear;
+}
+@keyframes bounce {
+	10%,
+	100% {
+		transform: translate(0);
+	}
+	25% {
+		transform: rotateX(20deg) translateY(2px) rotate(-3deg);
+	}
+	50% {
+		transform: translateY(-20px) rotate(3deg) scale(1.1);
+	}
+}
+h1.animated-span span:nth-child(2) {
+	animation-delay: 0.05s;
+}
+h1.animated-span span:nth-child(3) {
+	animation-delay: 0.1s;
+}
+h1.animated-span span:nth-child(4) {
+	animation-delay: 0.15s;
+}
+h1.animated-span span:nth-child(5) {
+	animation-delay: 0.2s;
+}
+h1.animated-span span:nth-child(6) {
+	animation-delay: 0.25s;
+}
+h1.animated-span span:nth-child(7) {
+	animation-delay: 0.3s;
+}
+h1.animated-span span:nth-child(8) {
+	animation-delay: 0.35s;
+}
+h1.animated-span span:nth-child(9) {
+	animation-delay: 0.4s;
+}
+h1.animated-span span:nth-child(10) {
+	animation-delay: 0.45s;
+}
+h1.animated-span span:nth-child(11) {
+	animation-delay: 0.5s;
+}
+h1.animated-span span:nth-child(12) {
+	animation-delay: 0.55s;
+}
+h1.animated-span span:nth-child(13) {
+	animation-delay: 0.6s;
+}
+h1.animated-span span:nth-child(14) {
+	animation-delay: 0.65s;
+}
+h1.animated-span span:nth-child(15) {
+	animation-delay: 0.7s;
+}
+h1.animated-span span:nth-child(16) {
+	animation-delay: 0.75s;
+}
+h1.animated-span span:nth-child(17) {
+	animation-delay: 0.8s;
 }
 
-.subtitle {
-  font-weight: 300;
-  font-size: 1.1rem;
-  color: #526488;
-  word-spacing: 2px;
-  padding-bottom: 15px;
-  max-width: 600px;
+.slide-bottom-enter-active,
+.slide-bottom-leave-active {
+	transition: opacity 0.25s ease-in-out;
 }
-
-.subtitle a {
-  font-weight: 500;
-  color: inherit;
-}
-
-.links {
-  padding-top: 15px;
-  margin-bottom: 20px;
-}
-
-.content-logos {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 500px;
-}
-
-.plus {
-  font-size: 2.5rem;
-  margin: 15px;
-  color: #35495e;
-}
-
-.h3 {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  font-weight: 400;
-  margin: 10px;
+.slide-bottom-enter,
+.slide-bottom-leave-to {
+	opacity: 0;
 }
 </style>
