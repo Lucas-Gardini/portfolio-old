@@ -92,7 +92,11 @@
 						:open.sync="activeSidebar"
 					>
 						<template #logo>
-							<img src="@/assets/me.jpg" class="me-image" />
+							<img
+								src="@/assets/me.jpg"
+								class="me-image"
+								alt="Foto do Desenvolvedor / Photo of The Developer"
+							/>
 						</template>
 						<vs-sidebar-item
 							id="home"
