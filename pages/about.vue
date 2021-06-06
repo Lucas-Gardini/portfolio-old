@@ -16,30 +16,15 @@
 						href="https://www.ctd.ifsp.edu.br/"
 						>Instituto Federal São Paulo Câmpus Catanduva</a
 					>, comecei a programar em 2019 no inicio do curso e desde
-					então estou aprendendo mais a cada dia. Comecei com
-					<i class="bx bxl-python"></i> Python e depois
-					<i class="mdi mdi-language-php"></i> PHP. Mas acabei me
-					encontrando no <i class="bx bxl-javascript"></i> Javascript.
-					Desde então meu foco é aprimorar minhas habilidades tanto no
-					front-end utilizando <i class="bx bxl-vuejs"></i> VueJs
-					juntamente com <i class="mdi mdi-nuxt"></i> NuxtJs e
-					<i class="mdi mdi-electron-framework"></i> Electron, quanto
-					no back-end fazendo uso do
-					<i class="bx bxl-nodejs"></i> NodeJs e do
-					<i class="mdi mdi-server"></i> Express, juntamento com
-					<span
-						class="iconify"
-						data-icon="vscode-icons:file-type-mongo"
-						data-inline="false"
-					></span>
-					MongoDB e do
-					<span
-						class="iconify"
-						data-icon="logos:mysql"
-						data-inline="false"
-					></span>
-					MySql. Também estou estudando um framework javascript
-					brasileiro chamado Nu<span style="color: #d22365">ll</span
+					então estou aprendendo mais a cada dia. Comecei com Python e
+					depois PHP. Mas acabei me encontrando no Javascript. Desde
+					então meu foco é aprimorar minhas habilidades tanto no
+					front-end utilizando VueJs juntamente com NuxtJs e Electron,
+					quanto no back-end fazendo uso do NodeJs e do Express,
+					juntamente do MongoDB e do MySql. Também estou estudando um
+					framework javascript brasileiro chamado Nu<span
+						style="color: #d22365"
+						>ll</span
 					>stack.
 				</p>
 			</template>

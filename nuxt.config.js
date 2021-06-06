@@ -22,16 +22,14 @@ export default {
 				name: "viewport",
 				content: "width=device-width, initial-scale=1",
 			},
-			{ hid: "description", name: "description", content: "" },
-		],
-		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
-		script: [
 			{
-				hid: "iconify",
-				src: "https://code.iconify.design/1/1.0.7/iconify.min.js",
-				defer: false,
+				hid: "description",
+				name: "description",
+				content:
+					"Meu portfólio, onde você irá encontrar várias informações minhas como desenvolvedor. Espero que goste!",
 			},
 		],
+		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
@@ -41,7 +39,7 @@ export default {
 	],
 
 	loading: {
-		color: "green",
+		color: "#00B74A",
 		height: "5px",
 	},
 
