@@ -37,39 +37,34 @@
 
 <script>
 export default {
-	data() {
+	transition: "fade",
+	data: () => {
 		return {
-			isMobile: this.$isMobile(),
+			isMobile: false,
 		};
 	},
-	created() {
-		console.log(this.$isMobile());
+	mounted() {
+		this.isMobile = this.$isMobile();
 	},
 };
 </script>
 
 <style>
-.getOutOfTheNavbarWay {
-	margin-top: 120px;
-	margin-left: 10px;
-	margin-right: 10px;
-}
-
-.vs-card {
+.vs-card-content.type-3 .vs-card {
 	cursor: default !important;
 	max-width: none !important;
 }
 
-.vs-card:hover {
+.vs-card-content.type-3 .vs-card:hover {
 	transform: none !important;
 }
 
-.vs-card-content {
+.vs-card-content.type-3 .vs-card-content {
 	margin: auto;
 	min-width: 80vw;
 }
 
-.vs-card__img {
+.vs-card-content.type-3 .vs-card__img {
 	margin: 20px;
 	max-width: 300px;
 }

@@ -132,7 +132,12 @@
 			</div>
 		</transition>
 		<vs-button
-			style="position: fixed; bottom: 5%; right: 2.5%"
+			style="
+				position: fixed;
+				bottom: 5%;
+				right: 2.5%;
+				z-index: 999999 !important;
+			"
 			color="#00B74A"
 			circle
 			icon
@@ -142,7 +147,7 @@
 		>
 			<i class="bx bx-up-arrow-alt"></i>
 		</vs-button>
-		<Nuxt />
+		<Nuxt style="padding-bottom: 100px" />
 		<footer>Copyright © 2021 - Lucas Gardini Dias</footer>
 	</div>
 </template>
@@ -157,13 +162,16 @@ export default {
 		isPaddingScrollActive: false,
 	}),
 	watch: {
-		// whenever question changes, this function will run
 		active() {
 			this.activeSidebar = false;
 		},
+		"$route.path"(to, from) {
+			if (to === "/" && from === "/contact") {
+				this.active = "home";
+			}
+		},
 	},
 	mounted() {
-		console.log(this.$route.name);
 		this.active = this.$route.name === "index" ? "home" : this.$route.name;
 		this.checkNavResponsivity();
 		window.addEventListener("resize", this.checkNavResponsivity);
@@ -232,6 +240,33 @@ body {
 	margin: 0;
 }
 
+* {
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	height: 5px;
+}
+::-webkit-scrollbar-thumb {
+	background: radial-gradient(circle, #00b74a 87%, #fbfbfb 100%);
+	border-radius: 5px;
+}
+::-webkit-scrollbar-thumb:hover {
+	background: radial-gradient(circle, #00a13e 100%, #00a13e 100%);
+}
+::-webkit-scrollbar-track {
+	background: #ffffff;
+	border-radius: 10px;
+	box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
+.getOutOfTheNavbarWay {
+	margin-top: 120px;
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
 .me-image {
 	max-width: 100px;
 	min-width: 100px;
@@ -248,11 +283,15 @@ body {
 	border-radius: 5px;
 }
 
-.fade-enter-active,
-.fade-leave-active {
-	transition: opacity 0.5s;
+.fade-enter-active {
+	transition: all 0.1s ease;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-leave-active {
+	transition: all 0.05s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.fade-enter, .slide-fade-leave-to
+/* .slide-fade-leave-active em versões anteriores a 2.1.8 */ {
+	transform: translateX(10px);
 	opacity: 0;
 }
 
