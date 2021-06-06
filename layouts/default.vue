@@ -17,6 +17,7 @@
 							v-if="isMobile"
 							color="#00B74A"
 							icon
+							aria-label="Menu"
 							@click="activeSidebar = !activeSidebar"
 						>
 							<i class="bx bx-menu"></i>
@@ -68,6 +69,7 @@
 							color="#121212"
 							blank
 							icon
+							aria-label="Github"
 						>
 							<i class="bx bxl-github"></i>
 						</vs-button>
@@ -76,6 +78,7 @@
 							color="#1266F1"
 							blank
 							icon
+							aria-label="Facebook"
 						>
 							<i class="bx bxl-facebook"></i>
 						</vs-button>
@@ -130,6 +133,7 @@
 			circle
 			icon
 			floating
+			aria-label="Voltar ao topo"
 			@click="scrollTop()"
 		>
 			<i class="bx bx-up-arrow-alt"></i>

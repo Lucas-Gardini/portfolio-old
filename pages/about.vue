@@ -5,7 +5,10 @@
 				<h3>Sobre mim</h3>
 			</template>
 			<template v-if="!isMobile" #img>
-				<img src="@/assets/me.jpg" alt="" />
+				<img
+					src="@/assets/me.jpg"
+					alt="Foto do Desenvolvedor / Photo of The Developer"
+				/>
 			</template>
 			<template #text>
 				<p>
