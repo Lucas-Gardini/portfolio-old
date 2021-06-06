@@ -5,6 +5,11 @@ export default {
 	// Target: https://go.nuxtjs.dev/config-target
 	target: "static",
 
+	server: {
+		port: 3000, // default: 3000
+		host: "0.0.0.0", // default: localhost
+	}, // other configs
+
 	// Global page headers: https://go.nuxtjs.dev/config-head
 	head: {
 		title: "Lucas Gardini - Portfólio",
@@ -20,10 +25,20 @@ export default {
 			{ hid: "description", name: "description", content: "" },
 		],
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+		script: [
+			{
+				hid: "iconify",
+				src: "https://code.iconify.design/1/1.0.7/iconify.min.js",
+				defer: false,
+			},
+		],
 	},
 
 	// Global CSS: https://go.nuxtjs.dev/config-css
-	css: ["vuesax/dist/vuesax.css"],
+	css: [
+		"vuesax/dist/vuesax.css",
+		"@mdi/font/css/materialdesignicons.min.css",
+	],
 
 	loading: {
 		color: "green",

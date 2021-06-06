@@ -25,7 +25,10 @@
 							<vs-avatar
 								:size="isPaddingScrollActive ? '22' : '33'"
 							>
-								<img src="@/assets/me.jpg" alt="" />
+								<!-- <img src="@/assets/me.jpg" alt="" /> -->
+								<i
+									class="mdi mdi-microsoft-visual-studio-code"
+								></i>
 							</vs-avatar>
 						</div>
 					</template>
@@ -139,13 +142,21 @@
 <script>
 export default {
 	data: () => ({
-		active: "home",
+		active: "",
 		activeSidebar: false,
 		isMobile: false,
 		loaded: false,
 		isPaddingScrollActive: false,
 	}),
+	watch: {
+		// whenever question changes, this function will run
+		active() {
+			this.activeSidebar = false;
+		},
+	},
 	mounted() {
+		console.log(this.$route.name);
+		this.active = this.$route.name === "index" ? "home" : this.$route.name;
 		this.checkNavResponsivity();
 		window.addEventListener("resize", this.checkNavResponsivity);
 		this.checkNavPaddingScroll();

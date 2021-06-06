@@ -2,7 +2,10 @@
 	<div>
 		<div class="center">
 			<div>
-				<h1 :class="animatedSpan">
+				<h1
+					:class="animatedSpan"
+					:style="isMobile ? 'font-size: x-large !important' : ''"
+				>
 					<span>L</span><span>U</span><span>C</span><span>A</span
 					><span>S</span>&nbsp;<span>G</span><span>A</span
 					><span>R</span><span>D</span><span>I</span><span>N</span
@@ -28,6 +31,15 @@
 					<span style="color: #41b883"
 						><i class="bx bxl-vuejs"></i
 					></span>
+					<span style="color: #41b883"
+						><i class="mdi mdi-nuxt"></i
+					></span>
+					<span style="color: #9feaf9"
+						><i class="mdi mdi-electron-framework"></i
+					></span>
+					<span style="color: #7276ad"
+						><i class="mdi mdi-language-php"></i
+					></span>
 					<span style="color: #3d78a9">
 						<i class="bx bxl-python"></i>
 					</span>
@@ -43,9 +55,16 @@ export default {
 	data: () => {
 		return {
 			animatedSpan: "animated-span",
+			isMobile: false,
 		};
 	},
 	mounted() {
+		this.isMobile = this.$isMobile();
+		document
+			.querySelector(
+				".vs-button.vs-button--null.vs-button--size-null.vs-button--icon.vs-button--circle.vs-button--floating"
+			)
+			.setAttribute("style", "display: none");
 		setInterval(() => {
 			this.animatedSpan = "";
 			setTimeout(() => {
