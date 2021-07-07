@@ -49,11 +49,35 @@
 			<div class="content">
 				<div>
 					<h2 :style="width < 615 ? 'text-align: center' : ''">
+						Área de atuação
+					</h2>
+					<hr />
+					<div style="margin-bottom: 10px">
+						<p>
+							Com formação na área de tecnologia, tenho
+							experiência na criação de softwares e aplicações web
+							utilizando como linguaguem principal o
+							<a
+								href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+								target="_blank"
+							>
+								<!-- <i class="mdi mdi-language-javascript"></i> -->
+								JavaScript</a
+							>.
+						</p>
+					</div>
+				</div>
+				<div>
+					<h2 :style="width < 615 ? 'text-align: center' : ''">
 						Formação / Cursos
 					</h2>
 					<hr />
 					<div style="margin-bottom: 10px">
 						<p>
+							<i
+								style="font-size: 1em"
+								class="mdi mdi-ip-network"
+							></i>
 							Técnico em Redes de Computadores Integrado ao Ensino
 							Médio -
 							<a
@@ -69,7 +93,21 @@
 					</div>
 					<hr />
 					<div style="margin-bottom: 10px">
-						<p>Olimpíadas HTML, CSS, e JavaScript</p>
+						<p>
+							<i
+								class="mdi mdi-language-html5"
+								style="color: #e44d21"
+							></i
+							><i
+								class="mdi mdi-language-css3"
+								style="color: #264ce5"
+							></i
+							><i
+								class="mdi mdi-language-javascript"
+								style="color: #f6de1e"
+							></i>
+							Olimpíadas HTML, CSS, e JavaScript
+						</p>
 						<p>
 							<i class="mdi mdi-calendar-clock"></i> 21/06/2021 -
 							25/06/2021
@@ -83,8 +121,11 @@
 					</div>
 					<hr />
 					<div style="margin-bottom: 10px">
-						<p>Introdução ao Front-End - TIMTEC</p>
-						<p><i class="mdi mdi-calendar-clock"></i> 27/05/2021</p>
+						<p>
+							<i class="mdi mdi-monitor-dashboard"></i> Introdução
+							ao Front-End - TIMTEC
+						</p>
+						<p><i class="mdi mdi-calendar-clock"></i> 05/07/2021</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
 							<a
@@ -101,8 +142,18 @@
 						</p>
 					</div>
 					<hr />
-					<div>
-						<p>Introdução ao JavaScript - Fundação Bradesco</p>
+					<div style="margin-bottom: 10px">
+						<p>
+							<i
+								class="mdi mdi-language-javascript"
+								style="color: #f6de1e"
+							></i
+							><i
+								class="mdi mdi-jquery"
+								style="color: #0968aa"
+							></i>
+							Introdução ao JavaScript - Fundação Bradesco
+						</p>
 						<p><i class="mdi mdi-calendar-clock"></i> 27/05/2021</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
@@ -118,6 +169,152 @@
 								>Validar Certificado</a
 							>
 						</p>
+					</div>
+				</div>
+				<div>
+					<h2 :style="width < 615 ? 'text-align: center' : ''">
+						Habilidades
+					</h2>
+					<hr />
+					<div style="margin-bottom: 10px">
+						<h3>Desenvolvimento de WebSites (Estáticos)</h3>
+						<ul>
+							<li>
+								<i class="mdi mdi-language-html5"></i> HTML5
+							</li>
+							<li><i class="mdi mdi-language-css3"></i> CSS3</li>
+							<li>
+								<i class="mdi mdi-language-javascript"></i> JS
+							</li>
+							<li><i class="mdi mdi-bootstrap"></i> Bootstrap</li>
+						</ul>
+					</div>
+					<div style="margin-bottom: 10px">
+						<h3>Desenvolvimento de WebSites (Dinâmicos)</h3>
+						<vs-table>
+							<template #thead>
+								<vs-tr
+									style="background-color: #00b74a !important"
+								>
+									<vs-th
+										><i
+											class="
+												mdi mdi-desktop-mac-dashboard
+											"
+										></i>
+										&nbsp;Front-End
+									</vs-th>
+									<vs-th
+										><i class="mdi mdi-server"></i>
+										&nbsp;Back-End
+									</vs-th>
+								</vs-tr>
+							</template>
+							<template #tbody>
+								<vs-tr>
+									<vs-td style="font-size: 1.1em">
+										<p>
+											<i
+												class="mdi mdi-language-html5"
+											></i>
+											HTML5
+										</p>
+										<p>
+											<i
+												class="mdi mdi-language-css3"
+											></i>
+											CSS3
+										</p>
+										<p>
+											<i
+												class="
+													mdi mdi-language-javascript
+												"
+											></i>
+											JS
+										</p>
+										<p>
+											<i class="mdi mdi-vuejs"></i>
+											Vue
+										</p>
+										<p>
+											<i class="mdi mdi-vuetify"></i>
+											Vuetify
+										</p>
+									</vs-td>
+									<vs-td style="font-size: 1.1em">
+										<p>
+											<i class="mdi mdi-nodejs"></i>
+											NodeJs
+										</p>
+										<p>
+											<i class="mdi mdi-server-minus"></i>
+											ExpressJs
+										</p>
+										<p>
+											<img
+												width="15"
+												height="15"
+												src="https://nullstack.app/favicon-96x96.png"
+											/>
+											Nullstack
+										</p>
+										<p>
+											<i class="mdi mdi-database"></i>
+											MySql e MongoDB
+										</p>
+									</vs-td>
+								</vs-tr>
+							</template>
+						</vs-table>
+					</div>
+					<div style="margin-bottom: 10px">
+						<h3>Desenvolvimento de Aplicativos</h3>
+						<ul>
+							<li>
+								<vs-table>
+									<template #thead>
+										<vs-tr>
+											<vs-th
+												><i
+													class="mdi mdi-desktop-mac"
+												></i>
+												&nbsp;Windows e Linux
+											</vs-th>
+											<vs-th
+												><i
+													class="mdi mdi-cellphone"
+												></i>
+												Android e IOS
+											</vs-th>
+										</vs-tr>
+									</template>
+									<template #tbody>
+										<vs-tr>
+											<vs-td>
+												<span
+													><i
+														class="
+															mdi
+															mdi-electron-framework
+														"
+													></i>
+													Electron</span
+												>
+											</vs-td>
+											<vs-td>
+												<span
+													><i
+														class="mdi mdi-react"
+													></i>
+													React-Native</span
+												>
+											</vs-td>
+										</vs-tr>
+									</template>
+								</vs-table>
+							</li>
+						</ul>
 					</div>
 				</div>
 			</div>
@@ -348,5 +545,9 @@ li {
 		transform: rotate(90deg) translateY(-1%) translateX(-217%) scaleX(1.7);
 		opacity: 0;
 	}
+}
+
+table tbody {
+	overflow: hidden !important;
 }
 </style>
