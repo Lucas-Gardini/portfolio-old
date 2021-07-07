@@ -56,6 +56,13 @@
 							<i class="bx bx-code-alt"></i> Projetos
 						</vs-navbar-item>
 						<vs-navbar-item
+							id="resume"
+							to="/resume"
+							:active="active == 'resume'"
+						>
+							<i class="bx bx-id-card"></i> Currículo
+						</vs-navbar-item>
+						<vs-navbar-item
 							id="contact"
 							to="/contact"
 							:active="active == 'contact'"
@@ -118,6 +125,13 @@
 							:active="active == 'projects'"
 						>
 							<i class="bx bx-code-alt"></i> Projetos
+						</vs-sidebar-item>
+						<vs-sidebar-item
+							id="resume"
+							to="/resume"
+							:active="active == 'resume'"
+						>
+							<i class="bx bx-id-card"></i> Currículo
 						</vs-sidebar-item>
 						<vs-sidebar-item
 							id="contact"
