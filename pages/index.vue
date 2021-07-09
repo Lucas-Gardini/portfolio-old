@@ -37,6 +37,9 @@
 					<span style="color: #9feaf9"
 						><i class="mdi mdi-electron-framework"></i
 					></span>
+					<span style="color: #5fd2f3"
+						><i class="mdi mdi-react"></i
+					></span>
 					<span style="color: #7276ad"
 						><i class="mdi mdi-language-php"></i
 					></span>
@@ -161,7 +164,7 @@ h1.animated-span span:nth-child(17) {
 
 .slide-bottom-enter-active,
 .slide-bottom-leave-active {
-	transition: opacity 0.25s ease-in-out;
+	transition: opacity 0.25s;
 }
 .slide-bottom-enter,
 .slide-bottom-leave-to {

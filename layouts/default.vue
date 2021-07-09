@@ -11,6 +11,7 @@
 					color="#fbfbfb"
 					text-dark
 					shadow
+					style="border-bottom: 1px solid #121212"
 				>
 					<template #left>
 						<vs-button

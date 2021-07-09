@@ -180,13 +180,33 @@
 						<h3>Desenvolvimento de WebSites (Estáticos)</h3>
 						<ul>
 							<li>
-								<i class="mdi mdi-language-html5"></i> HTML5
+								<i
+									class="mdi mdi-language-html5"
+									style="color: #e44d21"
+								></i>
+								HTML5
 							</li>
-							<li><i class="mdi mdi-language-css3"></i> CSS3</li>
 							<li>
-								<i class="mdi mdi-language-javascript"></i> JS
+								<i
+									class="mdi mdi-language-css3"
+									style="color: #264ce5"
+								></i>
+								CSS3
 							</li>
-							<li><i class="mdi mdi-bootstrap"></i> Bootstrap</li>
+							<li>
+								<i
+									class="mdi mdi-language-javascript"
+									style="color: #f6de1e"
+								></i>
+								JS
+							</li>
+							<li>
+								<i
+									class="mdi mdi-bootstrap"
+									style="color: #8152cd"
+								></i>
+								Bootstrap
+							</li>
 						</ul>
 					</div>
 					<div style="margin-bottom: 10px">
@@ -213,56 +233,68 @@
 							<template #tbody>
 								<vs-tr>
 									<vs-td style="font-size: 1.1em">
-										<p>
+										<span>
 											<i
 												class="mdi mdi-language-html5"
+												style="color: #e44d21"
 											></i>
-											HTML5
-										</p>
-										<p>
+											HTML5 </span
+										><br />
+										<span>
 											<i
 												class="mdi mdi-language-css3"
+												style="color: #264ce5"
 											></i>
-											CSS3
-										</p>
-										<p>
+											CSS3 </span
+										><br />
+										<span>
 											<i
 												class="
 													mdi mdi-language-javascript
 												"
+												style="color: #f6de1e"
 											></i>
-											JS
-										</p>
-										<p>
-											<i class="mdi mdi-vuejs"></i>
-											Vue
-										</p>
-										<p>
+											JS </span
+										><br />
+										<span>
+											<i
+												class="mdi mdi-vuejs"
+												style="color: #41b883"
+											></i>
+											Vue </span
+										><br />
+										<span>
 											<i class="mdi mdi-vuetify"></i>
 											Vuetify
-										</p>
+										</span>
 									</vs-td>
 									<vs-td style="font-size: 1.1em">
-										<p>
-											<i class="mdi mdi-nodejs"></i>
-											NodeJs
-										</p>
-										<p>
+										<span>
+											<i
+												class="mdi mdi-nodejs"
+												style="color: #89c042"
+											></i>
+											NodeJs </span
+										><br />
+										<span>
 											<i class="mdi mdi-server-minus"></i>
-											ExpressJs
-										</p>
-										<p>
+											ExpressJs </span
+										><br />
+										<span>
 											<img
 												width="15"
 												height="15"
 												src="https://nullstack.app/favicon-96x96.png"
 											/>
-											Nullstack
-										</p>
-										<p>
-											<i class="mdi mdi-database"></i>
+											Nullstack </span
+										><br />
+										<span>
+											<i
+												class="mdi mdi-database"
+												style="color: #3d78a9"
+											></i>
 											MySql e MongoDB
-										</p>
+										</span>
 									</vs-td>
 								</vs-tr>
 							</template>
@@ -291,21 +323,23 @@
 									</template>
 									<template #tbody>
 										<vs-tr>
-											<vs-td>
+											<vs-td style="font-size: 1.1em">
 												<span
 													><i
 														class="
 															mdi
 															mdi-electron-framework
 														"
+														style="color: #00eaf9"
 													></i>
 													Electron</span
 												>
 											</vs-td>
-											<vs-td>
+											<vs-td style="font-size: 1.1em">
 												<span
 													><i
 														class="mdi mdi-react"
+														style="color: #5fd2f3"
 													></i>
 													React-Native</span
 												>
@@ -549,5 +583,20 @@ li {
 
 table tbody {
 	overflow: hidden !important;
+}
+
+.vs-table table {
+	margin-top: 10px;
+	min-width: 0px !important;
+}
+
+.vs-table__th {
+	background-color: #121212 !important;
+	color: #fff;
+}
+
+.vs-table__tr {
+	background-color: #eff2f4 !important;
+	color: #121212;
 }
 </style>
