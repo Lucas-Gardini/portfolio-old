@@ -264,7 +264,7 @@ body {
 	height: 5px;
 }
 ::-webkit-scrollbar-thumb {
-	background: radial-gradient(circle, #00b74a 87%, #fbfbfb 100%);
+	background: radial-gradient(circle, #00a13e 100%, #00a13e 100%);
 	border-radius: 5px;
 }
 ::-webkit-scrollbar-thumb:hover {
@@ -316,8 +316,9 @@ footer {
 	left: 0%;
 	min-width: 100vw;
 	max-width: 100vw;
-	background-color: transparent;
+	background-color: #121212;
 	color: #fbfbfb;
 	text-align: center;
+	z-index: 9;
 }
 </style>

@@ -51,7 +51,7 @@
 					<h2 :style="width < 615 ? 'text-align: center' : ''">
 						Área de atuação
 					</h2>
-					<hr />
+
 					<div style="margin-bottom: 10px">
 						<p>
 							Com formação na área de tecnologia, tenho
@@ -67,11 +67,16 @@
 						</p>
 					</div>
 				</div>
+				<div class="divider">
+					<div class="divider div-transparent div-dot">
+						<div class="blob"></div>
+					</div>
+				</div>
 				<div>
 					<h2 :style="width < 615 ? 'text-align: center' : ''">
 						Formação / Cursos
 					</h2>
-					<hr />
+
 					<div style="margin-bottom: 10px">
 						<p>
 							<i
@@ -91,7 +96,7 @@
 							<i class="mdi mdi-calendar-clock"></i> 2019 - 2021
 						</p>
 					</div>
-					<hr />
+
 					<div style="margin-bottom: 10px">
 						<p>
 							<i
@@ -119,7 +124,7 @@
 							>
 						</p>
 					</div>
-					<hr />
+
 					<div style="margin-bottom: 10px">
 						<p>
 							<i class="mdi mdi-monitor-dashboard"></i> Introdução
@@ -141,7 +146,7 @@
 							>
 						</p>
 					</div>
-					<hr />
+
 					<div style="margin-bottom: 10px">
 						<p>
 							<i
@@ -171,12 +176,17 @@
 						</p>
 					</div>
 				</div>
+				<div class="divider">
+					<div class="divider div-transparent div-dot">
+						<div class="blob"></div>
+					</div>
+				</div>
 				<div>
 					<h2 :style="width < 615 ? 'text-align: center' : ''">
 						Habilidades
 					</h2>
-					<hr />
-					<div style="margin-bottom: 10px">
+
+					<div style="margin-bottom: 20px">
 						<h3>Desenvolvimento de WebSites (Estáticos)</h3>
 						<ul>
 							<li>
@@ -209,7 +219,7 @@
 							</li>
 						</ul>
 					</div>
-					<div style="margin-bottom: 10px">
+					<div style="margin-bottom: 20px">
 						<h3>Desenvolvimento de WebSites (Dinâmicos)</h3>
 						<vs-table>
 							<template #thead>
@@ -300,7 +310,7 @@
 							</template>
 						</vs-table>
 					</div>
-					<div style="margin-bottom: 10px">
+					<div style="margin-bottom: 20px">
 						<h3>Desenvolvimento de Aplicativos</h3>
 						<ul>
 							<li>
@@ -598,5 +608,66 @@ table tbody {
 .vs-table__tr {
 	background-color: #eff2f4 !important;
 	color: #121212;
+}
+
+.divider {
+	position: relative;
+	height: 1px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.div-transparent:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 2.5%;
+	right: 2.5%;
+	width: 90%;
+	height: 1px;
+	background-image: linear-gradient(
+		to right,
+		rgba(48, 49, 51, 0.2),
+		rgb(48, 49, 51),
+		rgba(48, 49, 51, 0.2)
+	);
+}
+
+.div-dot:after {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: -9px;
+	left: calc(50% - 9px);
+	width: 18px;
+	height: 18px;
+	border: 1px solid rgba(48, 49, 51, 0.6);
+	border-radius: 50%;
+	box-shadow: inset 0 0 0 2px white, 0 0 0 4px white;
+
+	background: rgb(0, 183, 74);
+	border-radius: 50%;
+	box-shadow: 0 0 0 0 rgba(0, 183, 74, 1);
+	height: 20px;
+	width: 20px;
+	transform: scale(1);
+	animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+	0% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 183, 74, 0.7);
+	}
+
+	70% {
+		transform: scale(1);
+		box-shadow: 0 0 0 10px rgba(0, 183, 74, 0);
+	}
+
+	100% {
+		transform: scale(0.95);
+		box-shadow: 0 0 0 0 rgba(0, 183, 74, 0);
+	}
 }
 </style>
