@@ -147,6 +147,7 @@
 			</div>
 		</transition>
 		<vs-button
+			id="scrollTop"
 			style="
 				position: fixed;
 				bottom: 5%;
@@ -163,7 +164,7 @@
 			<i class="bx bx-up-arrow-alt"></i>
 		</vs-button>
 		<Nuxt style="padding-bottom: 100px" />
-		<footer>Copyright © 2021 - Lucas Gardini Dias</footer>
+		<footer id="footer">Copyright © 2021 - Lucas Gardini Dias</footer>
 	</div>
 </template>
 
@@ -274,6 +275,10 @@ body {
 	background: #ffffff;
 	border-radius: 10px;
 	box-shadow: inset 7px 10px 12px #f0f0f0;
+}
+
+.hide {
+	display: none !important;
 }
 
 .getOutOfTheNavbarWay {

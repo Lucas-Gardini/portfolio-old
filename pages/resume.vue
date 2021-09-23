@@ -1,6 +1,6 @@
 <template>
 	<div class="getOutOfTheNavbarWay">
-		<div v-if="width > 615" class="resume">
+		<div v-if="width > 615" class="resume" style="position: relative">
 			<vs-row>
 				<vs-col
 					vs-type="flex"
@@ -46,6 +46,23 @@
 				</vs-col>
 			</vs-row>
 
+			<vs-button
+				id="pdfDownload"
+				gradient
+				style="
+					position: absolute;
+					right: 2.5%;
+					top: 2.5%;
+					min-width: 60px;
+				"
+				success
+				animation-type="scale"
+				@click="downloadResume"
+			>
+				<i class="bx bxs-download"></i>
+				<template #animate> Baixar PDF </template>
+			</vs-button>
+
 			<div class="content">
 				<div>
 					<h2 :style="width < 615 ? 'text-align: center' : ''">
@@ -67,7 +84,7 @@
 						</p>
 					</div>
 				</div>
-				<div class="divider">
+				<div id="divider1" class="divider">
 					<div class="divider div-transparent div-dot">
 						<div class="blob"></div>
 					</div>
@@ -94,6 +111,35 @@
 						</p>
 						<p>
 							<i class="mdi mdi-calendar-clock"></i> 2019 - 2021
+						</p>
+					</div>
+
+					<div style="margin-bottom: 10px">
+						<p>
+							<i
+								class="mdi mdi-language-javascript"
+								style="color: #f6de1e"
+							></i
+							><i
+								class="mdi mdi-jquery"
+								style="color: #0968aa"
+							></i>
+							Introdução ao JavaScript - Fundação Bradesco
+						</p>
+						<p><i class="mdi mdi-calendar-clock"></i> 27/05/2021</p>
+						<p>
+							<i class="mdi mdi-certificate"></i>
+							<a
+								target="_blank"
+								href="./certificates/FundacaoBradesco.pdf"
+								>Ver Certificado</a
+							>
+							-
+							<a
+								target="_blank"
+								href="https://www.ev.org.br/validar-certificado"
+								>Validar Certificado</a
+							>
 						</p>
 					</div>
 
@@ -149,34 +195,28 @@
 
 					<div style="margin-bottom: 10px">
 						<p>
-							<i
-								class="mdi mdi-language-javascript"
-								style="color: #f6de1e"
-							></i
-							><i
-								class="mdi mdi-jquery"
-								style="color: #0968aa"
-							></i>
-							Introdução ao JavaScript - Fundação Bradesco
+							<i class="mdi mdi-web"></i>
+							Deep Web - The complete Introduction to the hidden
+							web
 						</p>
-						<p><i class="mdi mdi-calendar-clock"></i> 27/05/2021</p>
+						<p><i class="mdi mdi-calendar-clock"></i> 23/09/2021</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
 							<a
 								target="_blank"
-								href="./certificates/FundacaoBradesco.pdf"
+								href="./certificates/DeepWeb-Introduction.pdf"
 								>Ver Certificado</a
 							>
 							-
 							<a
 								target="_blank"
-								href="https://www.ev.org.br/validar-certificado"
+								href="https://www.udemy.com/certificate/UC-b472e587-1051-4fe9-8002-eaa219d7c949/"
 								>Validar Certificado</a
 							>
 						</p>
 					</div>
 				</div>
-				<div class="divider">
+				<div id="divider2" class="divider">
 					<div class="divider div-transparent div-dot">
 						<div class="blob"></div>
 					</div>
@@ -360,6 +400,48 @@
 							</li>
 						</ul>
 					</div>
+					<div id="divider3" class="divider">
+						<div class="divider div-transparent div-dot">
+							<div class="blob"></div>
+						</div>
+					</div>
+					<div style="margin-bottom: 20px">
+						<h3>Conhecimentos Gerais</h3>
+						<ul>
+							<li>
+								<i class="bx bx-image-alt"></i>
+								Edição de imagens com Photoshop
+							</li>
+							<li>
+								<i
+									class="mdi mdi-microsoft-office"
+									style="color: #e43a00"
+								></i>
+								Pacote Office (Word, Excel, Powerpoint)
+							</li>
+							<li>
+								<i
+									class="mdi mdi-github"
+									style="color: #2d333b"
+								></i>
+								Github
+							</li>
+							<li>
+								<i
+									class="mdi mdi-laptop"
+									style="color: #8152cd"
+								></i>
+								Instalação e Formatação de Computadores
+							</li>
+							<li>
+								<i
+									class="mdi mdi-router-wireless"
+									style="color: #0ca47c"
+								></i>
+								Instalação e Configuração de Roteadores
+							</li>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -383,6 +465,26 @@ export default {
 		window.onresize = () => {
 			this.width = window.innerWidth;
 		};
+	},
+	methods: {
+		downloadResume() {
+			document.getElementById("navbar").classList.add("hide");
+			document.getElementById("scrollTop").classList.add("hide");
+			document.getElementById("divider1").classList.add("hide");
+			document.getElementById("divider2").classList.add("hide");
+			document.getElementById("divider3").classList.add("hide");
+			document.getElementById("pdfDownload").classList.add("hide");
+			document.getElementById("footer").style =
+				"position: absolute !important; bottom: 0% !important; right: 0% !important; background-color: transparent !important; color: #121212 !important;";
+			print();
+			document.getElementById("navbar").classList.remove("hide");
+			document.getElementById("scrollTop").classList.remove("hide");
+			document.getElementById("divider1").classList.remove("hide");
+			document.getElementById("divider2").classList.remove("hide");
+			document.getElementById("divider3").classList.remove("hide");
+			document.getElementById("pdfDownload").classList.remove("hide");
+			document.getElementById("footer").style = "";
+		},
 	},
 };
 </script>
