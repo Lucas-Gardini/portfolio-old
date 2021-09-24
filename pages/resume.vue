@@ -215,6 +215,29 @@
 							>
 						</p>
 					</div>
+
+					<div style="margin-bottom: 10px">
+						<p>
+							<i class="mdi mdi-web-box"></i>
+							Introduction to Domain Names and Web Hosting - Quick
+							Guide
+						</p>
+						<p><i class="mdi mdi-calendar-clock"></i> 24/09/2021</p>
+						<p>
+							<i class="mdi mdi-certificate"></i>
+							<a
+								target="_blank"
+								href="./certificates/DNS-Introduction.pdf"
+								>Ver Certificado</a
+							>
+							-
+							<a
+								target="_blank"
+								href="https://www.udemy.com/certificate/UC-67f9b669-dcfa-4993-b8a7-8656bdc6604d/"
+								>Validar Certificado</a
+							>
+						</p>
+					</div>
 				</div>
 				<div id="divider2" class="divider">
 					<div class="divider div-transparent div-dot">
