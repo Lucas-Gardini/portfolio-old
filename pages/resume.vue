@@ -111,6 +111,7 @@
 						</p>
 						<p>
 							<i class="mdi mdi-calendar-clock"></i> 2019 - 2021
+							(Ano de conclusão previsto)
 						</p>
 					</div>
 
@@ -353,6 +354,13 @@
 											<i class="mdi mdi-server-minus"></i>
 											ExpressJs </span
 										><br />
+										<span
+											><i
+												style="color: #7377ad"
+												class="mdi mdi-language-php"
+											></i>
+											PHP</span
+										><br />
 										<span>
 											<img
 												width="15"
@@ -491,14 +499,29 @@ export default {
 	},
 	methods: {
 		downloadResume() {
+			const links = document.querySelectorAll("a");
+			const icons = document.querySelectorAll("i");
+			let first = 0;
+			links.forEach((link) => {
+				link.style = "color: #000 !important";
+				if (first <= 2) {
+					first++;
+					return;
+				}
+				link.style = "display: none !important";
+			});
+			icons.forEach((icon) => {
+				if (icon.className.includes("mdi mdi-certificate")) {
+					icon.style = "display: none !important";
+				}
+			});
 			document.getElementById("navbar").classList.add("hide");
 			document.getElementById("scrollTop").classList.add("hide");
 			document.getElementById("divider1").classList.add("hide");
 			document.getElementById("divider2").classList.add("hide");
 			document.getElementById("divider3").classList.add("hide");
 			document.getElementById("pdfDownload").classList.add("hide");
-			document.getElementById("footer").style =
-				"position: absolute !important; bottom: 0% !important; right: 0% !important; background-color: transparent !important; color: #121212 !important;";
+			document.getElementById("footer").style = "display: none";
 			print();
 			document.getElementById("navbar").classList.remove("hide");
 			document.getElementById("scrollTop").classList.remove("hide");
@@ -507,6 +530,12 @@ export default {
 			document.getElementById("divider3").classList.remove("hide");
 			document.getElementById("pdfDownload").classList.remove("hide");
 			document.getElementById("footer").style = "";
+			links.forEach((link) => {
+				link.style = "";
+			});
+			icons.forEach((icon) => {
+				icon.style = "";
+			});
 		},
 	},
 };
