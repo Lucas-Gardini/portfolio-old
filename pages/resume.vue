@@ -239,6 +239,32 @@
 							>
 						</p>
 					</div>
+
+					<div style="margin-bottom: 10px">
+						<p>
+							<i class="mdi mdi-earth"></i>
+							I Semana Global do Empreendedorismo, organizado pela
+							prefeitura Municipal de Catanduva
+						</p>
+						<p>
+							<i class="mdi mdi-calendar-clock"></i> 20/10/2021 -
+							12/11/2021
+						</p>
+						<p>
+							<i class="mdi mdi-certificate"></i>
+							<a
+								target="_blank"
+								href="./certificates/1ºSemana-Global-Empreendedorismo-Catanduva.pdf"
+								>Ver Certificado</a
+							>
+							-
+							<a
+								target="_blank"
+								href="http://intranet.ctd.ifsp.edu.br/certificados/validar/B35E612B"
+								>Validar Certificado</a
+							>
+						</p>
+					</div>
 				</div>
 				<div id="divider2" class="divider">
 					<div class="divider div-transparent div-dot">
