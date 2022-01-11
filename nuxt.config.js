@@ -28,6 +28,8 @@ export default {
 				content:
 					"Meu portfólio, onde você irá encontrar várias informações minhas como desenvolvedor. Espero que goste!",
 			},
+			//<meta name="google-site-verification" content="yu0tTwLCpHyi1iUA4COOYg9Q8S7kKCuFus8ETsWiqB4" />
+			{name: "google-site-verification", content: "yu0tTwLCpHyi1iUA4COOYg9Q8S7kKCuFus8ETsWiqB4"},
 		],
 		link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
 	},
