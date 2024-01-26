@@ -23,9 +23,9 @@
 						<vs-navbar-item id="about" to="/about" :active="active == 'about'">
 							<i class="bx bxs-user"></i> Sobre
 						</vs-navbar-item>
-						<vs-navbar-item id="projects" to="/projects" :active="active == 'projects'">
+						<!-- <vs-navbar-item id="projects" to="/projects" :active="active == 'projects'">
 							<i class="bx bx-code-alt"></i> Projetos
-						</vs-navbar-item>
+						</vs-navbar-item> -->
 						<vs-navbar-item id="resume" to="/resume" :active="active == 'resume'">
 							<i class="bx bx-id-card"></i> Currículo
 						</vs-navbar-item>
