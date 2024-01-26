@@ -2,63 +2,36 @@
 	<div class="getOutOfTheNavbarWay">
 		<div v-if="width > 615" class="resume" style="position: relative">
 			<vs-row>
-				<vs-col
-					vs-type="flex"
-					vs-justify="center"
-					vs-align="center"
-					w="4"
-					xs="12"
-					class="image"
-				>
-					<img
-						:style="
-							width < 615 ? 'max-width: 100px !important' : ''
-						"
-						src="@/assets/me.jpg"
-						alt="Foto do Desenvolvedor / Photo of The Developer"
-					/>
+				<vs-col vs-type="flex" vs-justify="center" vs-align="center" w="4" xs="12" class="image">
+					<img :style="width < 615 ? 'max-width: 100px !important' : ''
+						" src="@/assets/me.jpg" alt="Foto do Desenvolvedor / Photo of The Developer" />
 				</vs-col>
-				<vs-col
-					:style="
-						width < 615
-							? 'text-align: center'
-							: 'padding-left: 10px'
-					"
-					vs-type="flex"
-					w="8"
-					xs="12"
-				>
+				<vs-col :style="width < 615
+					? 'text-align: center'
+					: 'padding-left: 10px'
+					" vs-type="flex" w="8" xs="12">
 					<div class="info-contact">
 						<h1>Lucas Gardini Dias</h1>
 						<p>
 							<i class="mdi mdi-calendar-account"></i> 30/06/2004
-							- 17 Anos
+							- {{ getYears() }} Anos
 						</p>
 						<p><i class="mdi mdi-city"></i> Catanduva-SP</p>
 						<p>
 							<i class="mdi mdi-email"></i>&nbsp;<a
-								href="mailto:lucasgardini.dias@hotmail.com"
-								>lucasgardini.dias@hotmail.com</a
-							>
+								href="mailto:contato@lucasgardini.com">contato@lucasgardini.com</a>
 						</p>
 						<p><i class="mdi mdi-phone"></i> (17) 99186-9746</p>
 					</div>
 				</vs-col>
 			</vs-row>
 
-			<vs-button
-				id="pdfDownload"
-				gradient
-				style="
+			<vs-button id="pdfDownload" gradient style="
 					position: absolute;
 					right: 2.5%;
 					top: 2.5%;
 					min-width: 60px;
-				"
-				success
-				animation-type="scale"
-				@click="downloadResume"
-			>
+				" success animation-type="scale" @click="downloadResume">
 				<i class="bx bxs-download"></i>
 				<template #animate> Baixar PDF </template>
 			</vs-button>
@@ -74,13 +47,10 @@
 							Com formação na área de tecnologia, tenho
 							experiência na criação de softwares e aplicações web
 							utilizando como linguaguem principal o
-							<a
-								href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
-								target="_blank"
-							>
+							<a href="https://developer.mozilla.org/pt-BR/docs/Learn/JavaScript/First_steps/What_is_JavaScript"
+								target="_blank">
 								<!-- <i class="mdi mdi-language-javascript"></i> -->
-								JavaScript</a
-							>.
+								JavaScript</a>.
 						</p>
 					</div>
 				</div>
@@ -94,70 +64,68 @@
 						Formação / Cursos
 					</h2>
 
+
 					<div style="margin-bottom: 10px">
 						<p>
-							<i
-								style="font-size: 1em"
-								class="mdi mdi-ip-network"
-							></i>
-							Técnico em Redes de Computadores Integrado ao Ensino
-							Médio -
-							<a
-								target="_blank"
-								href="https://www.ctd.ifsp.edu.br/"
-								>Instituto Federal de São Paulo</a
-							>
+							<i style="font-size: 1em" class="mdi mdi-ip-network"></i>
+							Análise e Desenvolvimento de Sistemas -
+							<a target="_blank" href="https://www.ctd.ifsp.edu.br/">Instituto Federal de São Paulo</a>
 							- Catanduva/SP
 						</p>
 						<p>
-							<i class="mdi mdi-calendar-clock"></i> 2019 - 2021
-							(Ano de conclusão previsto)
+							<i class="mdi mdi-calendar-clock"></i> 2022 - 2024 (previsão de conclusão)
 						</p>
 					</div>
 
 					<div style="margin-bottom: 10px">
 						<p>
-							<i
-								class="mdi mdi-language-javascript"
-								style="color: #f6de1e"
-							></i
-							><i
-								class="mdi mdi-jquery"
-								style="color: #0968aa"
-							></i>
+							<i style="font-size: 1em" class="mdi mdi-ip-network"></i>
+							Técnico em Redes de Computadores Integrado ao Ensino
+							Médio -
+							<a target="_blank" href="https://www.ctd.ifsp.edu.br/">Instituto Federal de São Paulo</a>
+							- Catanduva/SP
+						</p>
+						<p>
+							<i class="mdi mdi-calendar-clock"></i> 2019 - 2021
+						</p>
+					</div>
+
+					<div style="margin-bottom: 10px">
+						<p>
+							<i class="mdi mdi-nuxt" style="color: #00b74a"></i>
+							The Nuxt 3 Bootcamp - The Complete Developer Guide
+						</p>
+						<p><i class="mdi mdi-calendar-clock"></i> 17/12/2023</p>
+						<p>
+							<i class="mdi mdi-certificate"></i>
+							<a target="_blank" href="./certificates/nuxt3bootcamp.pdf">Ver Certificado</a>
+							-
+							<a target="_blank"
+								href="https://www.udemy.com/certificate/UC-ad7d8f6f-2283-4750-9641-550998611b21/">Validar
+								Certificado</a>
+						</p>
+					</div>
+
+					<div style="margin-bottom: 10px">
+						<p>
+							<i class="mdi mdi-language-javascript" style="color: #f6de1e"></i><i class="mdi mdi-jquery"
+								style="color: #0968aa"></i>
 							Introdução ao JavaScript - Fundação Bradesco
 						</p>
 						<p><i class="mdi mdi-calendar-clock"></i> 27/05/2021</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
-							<a
-								target="_blank"
-								href="./certificates/FundacaoBradesco.pdf"
-								>Ver Certificado</a
-							>
+							<a target="_blank" href="./certificates/FundacaoBradesco.pdf">Ver Certificado</a>
 							-
-							<a
-								target="_blank"
-								href="https://www.ev.org.br/validar-certificado"
-								>Validar Certificado</a
-							>
+							<a target="_blank" href="https://www.ev.org.br/validar-certificado">Validar Certificado</a>
 						</p>
 					</div>
 
 					<div style="margin-bottom: 10px">
 						<p>
-							<i
-								class="mdi mdi-language-html5"
-								style="color: #e44d21"
-							></i
-							><i
-								class="mdi mdi-language-css3"
-								style="color: #264ce5"
-							></i
-							><i
-								class="mdi mdi-language-javascript"
-								style="color: #f6de1e"
-							></i>
+							<i class="mdi mdi-language-html5" style="color: #e44d21"></i><i class="mdi mdi-language-css3"
+								style="color: #264ce5"></i><i class="mdi mdi-language-javascript"
+								style="color: #f6de1e"></i>
 							Olimpíadas HTML, CSS, e JavaScript
 						</p>
 						<p>
@@ -166,9 +134,7 @@
 						</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
-							<a target="_blank" href="./certificates/Kenzie.pdf"
-								>Ver Certificado</a
-							>
+							<a target="_blank" href="./certificates/Kenzie.pdf">Ver Certificado</a>
 						</p>
 					</div>
 
@@ -180,17 +146,10 @@
 						<p><i class="mdi mdi-calendar-clock"></i> 05/07/2021</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
-							<a
-								target="_blank"
-								href="./certificates/TIMTEC - Introdução ao front-end.pdf"
-								>Ver Certificado</a
-							>
+							<a target="_blank" href="./certificates/TIMTEC - Introdução ao front-end.pdf">Ver
+								Certificado</a>
 							-
-							<a
-								target="_blank"
-								href="http://mooc.timtec.com.br/certificate/Mqcvalr9"
-								>Validar Certificado</a
-							>
+							<a target="_blank" href="http://mooc.timtec.com.br/certificate/Mqcvalr9">Validar Certificado</a>
 						</p>
 					</div>
 
@@ -203,17 +162,11 @@
 						<p><i class="mdi mdi-calendar-clock"></i> 23/09/2021</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
-							<a
-								target="_blank"
-								href="./certificates/DeepWeb-Introduction.pdf"
-								>Ver Certificado</a
-							>
+							<a target="_blank" href="./certificates/DeepWeb-Introduction.pdf">Ver Certificado</a>
 							-
-							<a
-								target="_blank"
-								href="https://www.udemy.com/certificate/UC-b472e587-1051-4fe9-8002-eaa219d7c949/"
-								>Validar Certificado</a
-							>
+							<a target="_blank"
+								href="https://www.udemy.com/certificate/UC-b472e587-1051-4fe9-8002-eaa219d7c949/">Validar
+								Certificado</a>
 						</p>
 					</div>
 
@@ -226,17 +179,11 @@
 						<p><i class="mdi mdi-calendar-clock"></i> 24/09/2021</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
-							<a
-								target="_blank"
-								href="./certificates/DNS-Introduction.pdf"
-								>Ver Certificado</a
-							>
+							<a target="_blank" href="./certificates/DNS-Introduction.pdf">Ver Certificado</a>
 							-
-							<a
-								target="_blank"
-								href="https://www.udemy.com/certificate/UC-67f9b669-dcfa-4993-b8a7-8656bdc6604d/"
-								>Validar Certificado</a
-							>
+							<a target="_blank"
+								href="https://www.udemy.com/certificate/UC-67f9b669-dcfa-4993-b8a7-8656bdc6604d/">Validar
+								Certificado</a>
 						</p>
 					</div>
 
@@ -252,17 +199,11 @@
 						</p>
 						<p>
 							<i class="mdi mdi-certificate"></i>
-							<a
-								target="_blank"
-								href="./certificates/1ºSemana-Global-Empreendedorismo-Catanduva.pdf"
-								>Ver Certificado</a
-							>
+							<a target="_blank" href="./certificates/1ºSemana-Global-Empreendedorismo-Catanduva.pdf">Ver
+								Certificado</a>
 							-
-							<a
-								target="_blank"
-								href="http://intranet.ctd.ifsp.edu.br/certificados/validar/B35E612B"
-								>Validar Certificado</a
-							>
+							<a target="_blank" href="http://intranet.ctd.ifsp.edu.br/certificados/validar/B35E612B">Validar
+								Certificado</a>
 						</p>
 					</div>
 				</div>
@@ -280,31 +221,19 @@
 						<h3>Desenvolvimento de WebSites (Estáticos)</h3>
 						<ul>
 							<li>
-								<i
-									class="mdi mdi-language-html5"
-									style="color: #e44d21"
-								></i>
+								<i class="mdi mdi-language-html5" style="color: #e44d21"></i>
 								HTML5
 							</li>
 							<li>
-								<i
-									class="mdi mdi-language-css3"
-									style="color: #264ce5"
-								></i>
+								<i class="mdi mdi-language-css3" style="color: #264ce5"></i>
 								CSS3
 							</li>
 							<li>
-								<i
-									class="mdi mdi-language-javascript"
-									style="color: #f6de1e"
-								></i>
+								<i class="mdi mdi-language-javascript" style="color: #f6de1e"></i>
 								JS
 							</li>
 							<li>
-								<i
-									class="mdi mdi-bootstrap"
-									style="color: #8152cd"
-								></i>
+								<i class="mdi mdi-bootstrap" style="color: #8152cd"></i>
 								Bootstrap
 							</li>
 						</ul>
@@ -313,19 +242,13 @@
 						<h3>Desenvolvimento de WebSites (Dinâmicos)</h3>
 						<vs-table>
 							<template #thead>
-								<vs-tr
-									style="background-color: #00b74a !important"
-								>
-									<vs-th
-										><i
-											class="
+								<vs-tr style="background-color: #00b74a !important">
+									<vs-th><i class="
 												mdi mdi-desktop-mac-dashboard
-											"
-										></i>
+											"></i>
 										&nbsp;Front-End
 									</vs-th>
-									<vs-th
-										><i class="mdi mdi-server"></i>
+									<vs-th><i class="mdi mdi-server"></i>
 										&nbsp;Back-End
 									</vs-th>
 								</vs-tr>
@@ -334,35 +257,19 @@
 								<vs-tr>
 									<vs-td style="font-size: 1.1em">
 										<span>
-											<i
-												class="mdi mdi-language-html5"
-												style="color: #e44d21"
-											></i>
-											HTML5 </span
-										><br />
+											<i class="mdi mdi-language-html5" style="color: #e44d21"></i>
+											HTML5 </span><br />
 										<span>
-											<i
-												class="mdi mdi-language-css3"
-												style="color: #264ce5"
-											></i>
-											CSS3 </span
-										><br />
+											<i class="mdi mdi-language-css3" style="color: #264ce5"></i>
+											CSS3 </span><br />
 										<span>
-											<i
-												class="
+											<i class="
 													mdi mdi-language-javascript
-												"
-												style="color: #f6de1e"
-											></i>
-											JS </span
-										><br />
+												" style="color: #f6de1e"></i>
+											JS </span><br />
 										<span>
-											<i
-												class="mdi mdi-vuejs"
-												style="color: #41b883"
-											></i>
-											Vue </span
-										><br />
+											<i class="mdi mdi-vuejs" style="color: #41b883"></i>
+											Vue </span><br />
 										<span>
 											<i class="mdi mdi-vuetify"></i>
 											Vuetify
@@ -370,37 +277,20 @@
 									</vs-td>
 									<vs-td style="font-size: 1.1em">
 										<span>
-											<i
-												class="mdi mdi-nodejs"
-												style="color: #89c042"
-											></i>
-											NodeJs </span
-										><br />
+											<i class="mdi mdi-nodejs" style="color: #89c042"></i>
+											NodeJs </span><br />
 										<span>
 											<i class="mdi mdi-server-minus"></i>
-											ExpressJs </span
-										><br />
-										<span
-											><i
-												style="color: #7377ad"
-												class="mdi mdi-language-php"
-											></i>
-											PHP</span
-										><br />
+											ExpressJs </span><br />
 										<span>
-											<img
-												width="15"
-												height="15"
-												src="https://nullstack.app/favicon-96x96.png"
-											/>
-											Nullstack </span
-										><br />
+											<i class="mdi mdi-nestjs"></i>
+											NestJs </span><br />
 										<span>
-											<i
-												class="mdi mdi-database"
-												style="color: #3d78a9"
-											></i>
-											MySql e MongoDB
+											<img width="15" height="15" src="https://nullstack.app/favicon-96x96.png" />
+											Nullstack </span><br />
+										<span>
+											<i class="mdi mdi-database" style="color: #3d78a9"></i>
+											MySql, PostgreSql e MongoDB
 										</span>
 									</vs-td>
 								</vs-tr>
@@ -414,16 +304,10 @@
 								<vs-table>
 									<template #thead>
 										<vs-tr>
-											<vs-th
-												><i
-													class="mdi mdi-desktop-mac"
-												></i>
+											<vs-th><i class="mdi mdi-desktop-mac"></i>
 												&nbsp;Windows e Linux
 											</vs-th>
-											<vs-th
-												><i
-													class="mdi mdi-cellphone"
-												></i>
+											<vs-th><i class="mdi mdi-cellphone"></i>
 												Android e IOS
 											</vs-th>
 										</vs-tr>
@@ -431,25 +315,20 @@
 									<template #tbody>
 										<vs-tr>
 											<vs-td style="font-size: 1.1em">
-												<span
-													><i
-														class="
+												<span><i class="
 															mdi
 															mdi-electron-framework
-														"
-														style="color: #00eaf9"
-													></i>
-													Electron</span
-												>
+														" style="color: #00eaf9"></i>
+													Electron</span><br>
+												<span><i class="
+															mdi
+															mdi-desktop-mac
+														" style="color: #f4c34a"></i>
+													Tauri</span>
 											</vs-td>
 											<vs-td style="font-size: 1.1em">
-												<span
-													><i
-														class="mdi mdi-react"
-														style="color: #5fd2f3"
-													></i>
-													React-Native</span
-												>
+												<span><i class="mdi mdi-react" style="color: #5fd2f3"></i>
+													React-Native</span>
 											</vs-td>
 										</vs-tr>
 									</template>
@@ -470,31 +349,19 @@
 								Edição de imagens com Photoshop
 							</li>
 							<li>
-								<i
-									class="mdi mdi-microsoft-office"
-									style="color: #e43a00"
-								></i>
+								<i class="mdi mdi-microsoft-office" style="color: #e43a00"></i>
 								Pacote Office (Word, Excel, Powerpoint)
 							</li>
 							<li>
-								<i
-									class="mdi mdi-github"
-									style="color: #2d333b"
-								></i>
+								<i class="mdi mdi-github" style="color: #2d333b"></i>
 								Github
 							</li>
 							<li>
-								<i
-									class="mdi mdi-laptop"
-									style="color: #8152cd"
-								></i>
+								<i class="mdi mdi-laptop" style="color: #8152cd"></i>
 								Instalação e Formatação de Computadores
 							</li>
 							<li>
-								<i
-									class="mdi mdi-router-wireless"
-									style="color: #0ca47c"
-								></i>
+								<i class="mdi mdi-router-wireless" style="color: #0ca47c"></i>
 								Instalação e Configuração de Roteadores
 							</li>
 						</ul>
@@ -524,6 +391,12 @@ export default {
 		};
 	},
 	methods: {
+		getYears() {
+			const born = "2004-06-30";
+			const today = new Date();
+			const years = today.getFullYear() - new Date(born).getFullYear();
+			return years;
+		},
 		downloadResume() {
 			const links = document.querySelectorAll("a");
 			const icons = document.querySelectorAll("i");
@@ -574,6 +447,7 @@ export default {
 	padding-bottom: 20px;
 	border-radius: 20px;
 }
+
 .resume .content {
 	margin-top: 20px;
 	margin-left: 100px;
@@ -586,6 +460,7 @@ export default {
 		margin: 10px;
 		margin-bottom: 20px;
 	}
+
 	.resume .content {
 		margin-top: 20px;
 		margin-left: 5px;
@@ -599,16 +474,19 @@ export default {
 	display: flex;
 	margin: auto;
 }
+
 a {
 	transition: all 0.7s;
 	color: #00b74a;
 	text-decoration: none;
 	text-shadow: none;
 }
+
 a:hover {
 	transition: all 0.7s;
 	text-shadow: 2px 2px 9px rgba(150, 150, 150, 1);
 }
+
 a:visited {
 	color: #00b74a;
 	text-decoration: none;
@@ -653,16 +531,20 @@ li {
 		transform: rotate(0deg);
 		opacity: 0;
 	}
+
 	25% {
 		transform: rotate(0deg);
 		opacity: 1;
 	}
+
 	50% {
 		transform: rotate(-90deg);
 	}
+
 	75% {
 		opacity: 1;
 	}
+
 	100% {
 		transform: rotate(-90deg);
 		opacity: 0;
@@ -674,21 +556,26 @@ li {
 		transform: rotate(0deg);
 		opacity: 0;
 	}
+
 	25% {
 		transform: rotate(0deg);
 		opacity: 1;
 	}
+
 	50% {
 		transform: rotate(-90deg);
 	}
+
 	75% {
 		opacity: 1;
 	}
+
 	100% {
 		transform: rotate(-90deg);
 		opacity: 0;
 	}
 }
+
 .smartphone:before {
 	content: "";
 	display: block;
@@ -728,18 +615,22 @@ li {
 		transform: rotate(0deg);
 		opacity: 0;
 	}
+
 	25% {
 		opacity: 1;
 		transform-origin: left;
 		transform: rotate(0deg) translateY(0%) translateX(0%) scaleX(1);
 	}
+
 	50% {
 		transform-origin: left;
 		transform: rotate(90deg) translateY(-1%) translateX(-217%) scaleX(1.7);
 	}
+
 	75% {
 		opacity: 1;
 	}
+
 	100% {
 		transform-origin: left;
 		transform: rotate(90deg) translateY(-1%) translateX(-217%) scaleX(1.7);
@@ -752,18 +643,22 @@ li {
 		transform: rotate(0deg);
 		opacity: 0;
 	}
+
 	25% {
 		opacity: 1;
 		transform-origin: left;
 		transform: rotate(0deg) translateY(0%) translateX(0%) scaleX(1);
 	}
+
 	50% {
 		transform-origin: left;
 		transform: rotate(90deg) translateY(-1%) translateX(-217%) scaleX(1.7);
 	}
+
 	75% {
 		opacity: 1;
 	}
+
 	100% {
 		transform-origin: left;
 		transform: rotate(90deg) translateY(-1%) translateX(-217%) scaleX(1.7);
@@ -805,12 +700,10 @@ table tbody {
 	right: 2.5%;
 	width: 90%;
 	height: 1px;
-	background-image: linear-gradient(
-		to right,
-		rgba(48, 49, 51, 0.2),
-		rgb(48, 49, 51),
-		rgba(48, 49, 51, 0.2)
-	);
+	background-image: linear-gradient(to right,
+			rgba(48, 49, 51, 0.2),
+			rgb(48, 49, 51),
+			rgba(48, 49, 51, 0.2));
 }
 
 .div-dot:after {

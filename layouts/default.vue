@@ -2,143 +2,66 @@
 	<div>
 		<transition name="fade">
 			<div v-if="loaded">
-				<vs-navbar
-					id="navbar"
-					v-model="active"
-					fixed
-					padding-scroll
-					center-collapsed
-					color="#fbfbfb"
-					text-dark
-					shadow
-					style="border-bottom: 1px solid #121212"
-				>
+				<vs-navbar id="navbar" v-model="active" fixed padding-scroll center-collapsed color="#fbfbfb" text-dark
+					shadow style="border-bottom: 1px solid #121212">
 					<template #left>
-						<vs-button
-							v-if="isMobile"
-							color="#00B74A"
-							icon
-							aria-label="Menu"
-							@click="activeSidebar = !activeSidebar"
-						>
+						<vs-button v-if="isMobile" color="#00B74A" icon aria-label="Menu"
+							@click="activeSidebar = !activeSidebar">
 							<i class="bx bx-menu"></i>
 						</vs-button>
 						<div v-else style="margin: auto">
-							<vs-avatar
-								:size="isPaddingScrollActive ? '22' : '33'"
-							>
+							<vs-avatar :size="isPaddingScrollActive ? '22' : '33'">
 								<!-- <img src="@/assets/me.jpg" alt="" /> -->
-								<i
-									class="mdi mdi-microsoft-visual-studio-code"
-								></i>
+								<i class="mdi mdi-microsoft-visual-studio-code"></i>
 							</vs-avatar>
 						</div>
 					</template>
 					<template v-if="loaded && !isMobile" #default>
-						<vs-navbar-item
-							id="home"
-							to="/"
-							:active="active == 'home'"
-						>
+						<vs-navbar-item id="home" to="/" :active="active == 'home'">
 							<i class="bx bxs-home"></i> Início
 						</vs-navbar-item>
-						<vs-navbar-item
-							id="about"
-							to="/about"
-							:active="active == 'about'"
-						>
+						<vs-navbar-item id="about" to="/about" :active="active == 'about'">
 							<i class="bx bxs-user"></i> Sobre
 						</vs-navbar-item>
-						<vs-navbar-item
-							id="projects"
-							to="/projects"
-							:active="active == 'projects'"
-						>
+						<vs-navbar-item id="projects" to="/projects" :active="active == 'projects'">
 							<i class="bx bx-code-alt"></i> Projetos
 						</vs-navbar-item>
-						<vs-navbar-item
-							id="resume"
-							to="/resume"
-							:active="active == 'resume'"
-						>
+						<vs-navbar-item id="resume" to="/resume" :active="active == 'resume'">
 							<i class="bx bx-id-card"></i> Currículo
 						</vs-navbar-item>
-						<vs-navbar-item
-							id="contact"
-							to="/contact"
-							:active="active == 'contact'"
-						>
+						<vs-navbar-item id="contact" to="/contact" :active="active == 'contact'">
 							<i class="bx bx-link"></i> Contato
 						</vs-navbar-item>
 					</template>
 					<template #right>
-						<vs-button
-							href="https://github.com/Lucas-Gardini"
-							color="#121212"
-							blank
-							icon
-							aria-label="Github"
-						>
+						<vs-button href="https://github.com/Lucas-Gardini" color="#121212" blank icon aria-label="Github">
 							<i class="bx bxl-github"></i>
 						</vs-button>
-						<vs-button
-							href="https://www.facebook.com/lucasgardini.dias"
-							color="#1266F1"
-							blank
-							icon
-							aria-label="Facebook"
-						>
+						<vs-button href="https://www.facebook.com/lucasgardini.dias" color="#1266F1" blank icon
+							aria-label="Facebook">
 							<i class="bx bxl-facebook"></i>
 						</vs-button>
 					</template>
 				</vs-navbar>
 				<div class="hidden">
-					<vs-sidebar
-						v-model="active"
-						color="#00B74A"
-						fixed
-						:open.sync="activeSidebar"
-					>
+					<vs-sidebar v-model="active" color="#00B74A" fixed :open.sync="activeSidebar">
 						<template #logo>
-							<img
-								src="@/assets/me.jpg"
-								class="me-image"
-								alt="Foto do Desenvolvedor / Photo of The Developer"
-							/>
+							<img src="@/assets/logo.jpeg" class="me-image"
+								alt="Foto do Desenvolvedor / Photo of The Developer" />
 						</template>
-						<vs-sidebar-item
-							id="home"
-							to="/"
-							:active="active == 'home'"
-						>
+						<vs-sidebar-item id="home" to="/" :active="active == 'home'">
 							<i class="bx bxs-home"></i> Início
 						</vs-sidebar-item>
-						<vs-sidebar-item
-							id="about"
-							to="/about"
-							:active="active == 'about'"
-						>
+						<vs-sidebar-item id="about" to="/about" :active="active == 'about'">
 							<i class="bx bxs-user"></i> Sobre
 						</vs-sidebar-item>
-						<vs-sidebar-item
-							id="projects"
-							to="/projects"
-							:active="active == 'projects'"
-						>
+						<!-- <vs-sidebar-item id="projects" to="/projects" :active="active == 'projects'">
 							<i class="bx bx-code-alt"></i> Projetos
-						</vs-sidebar-item>
-						<vs-sidebar-item
-							id="resume"
-							to="/resume"
-							:active="active == 'resume'"
-						>
+						</vs-sidebar-item> -->
+						<vs-sidebar-item id="resume" to="/resume" :active="active == 'resume'">
 							<i class="bx bx-id-card"></i> Currículo
 						</vs-sidebar-item>
-						<vs-sidebar-item
-							id="contact"
-							to="/contact"
-							:active="active == 'contact'"
-						>
+						<vs-sidebar-item id="contact" to="/contact" :active="active == 'contact'">
 							<i class="bx bx-link"></i> Contato
 						</vs-sidebar-item>
 						<template #footer> </template>
@@ -146,25 +69,16 @@
 				</div>
 			</div>
 		</transition>
-		<vs-button
-			id="scrollTop"
-			style="
+		<vs-button id="scrollTop" style="
 				position: fixed;
 				bottom: 5%;
 				right: 2.5%;
 				z-index: 999999 !important;
-			"
-			color="#00B74A"
-			circle
-			icon
-			floating
-			aria-label="Voltar ao topo"
-			@click="scrollTop()"
-		>
+			" color="#00B74A" circle icon floating aria-label="Voltar ao topo" @click="scrollTop()">
 			<i class="bx bx-up-arrow-alt"></i>
 		</vs-button>
 		<Nuxt style="padding-bottom: 100px" />
-		<footer id="footer">Copyright © 2021 - Lucas Gardini Dias</footer>
+		<footer id="footer">Copyright © {{ new Date().getFullYear() }} - Lucas Gardini Dias</footer>
 	</div>
 </template>
 
@@ -264,13 +178,16 @@ body {
 	width: 5px;
 	height: 5px;
 }
+
 ::-webkit-scrollbar-thumb {
 	background: radial-gradient(circle, #00a13e 100%, #00a13e 100%);
 	border-radius: 5px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
 	background: radial-gradient(circle, #00a13e 100%, #00a13e 100%);
 }
+
 ::-webkit-scrollbar-track {
 	background: #ffffff;
 	border-radius: 10px;
@@ -306,11 +223,16 @@ body {
 .fade-enter-active {
 	transition: all 0.1s ease;
 }
+
 .fade-leave-active {
 	transition: all 0.05s cubic-bezier(1, 0.5, 0.8, 1);
 }
-.fade-enter, .slide-fade-leave-to
-/* .slide-fade-leave-active em versões anteriores a 2.1.8 */ {
+
+.fade-enter,
+.slide-fade-leave-to
+
+/* .slide-fade-leave-active em versões anteriores a 2.1.8 */
+	{
 	transform: translateX(10px);
 	opacity: 0;
 }
